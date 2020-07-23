@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GUIDA A SASS e SCSS</title>
+    <link rel="stylesheet" type="text/css" href="css/style-scss.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style-sass.css"/>
+</head>
+<body>
+<hr>
+<h1>GUIDA SASS e SCSS(sass 3) PER WINDOWS</h1>
+<h3>powered by Gianluca Tuono</h3>
+<hr>
+<p>Lista di comandi da eseguire per installare, configurare e usare sass sul proprio ambiente :</p>
+<ol>
+    <li>Installare NodeJs, potete recarvi <a href="https://nodejs.org/it/" target="_blank">qui</a> e scaricare l’ultima
+        versione (LTS) consigliata
+    </li>
+    <li>
+        – Npm: è il principale software utilizzato per maneggiare e installare moduli NodeJS<br>
+        – Node-sass: è una libreria che permette di compilare nativamente i file .scss in css ad una velocità
+        incredibile<br>
+        Verificare di aver installato nodeJs entrando nella SHELL e digitando il comando :<br>
+        <h4>node -v,</h4> <br>
+        successivamente installare NODE-SASS :
+    </li>
+    <li>
+        Per installare a livello globale Node-sass esegui il comando da SHELL :<br>
+        <h4>npm install node-sass -g</h4><br>
+        Alla fine dell’installazione verificare sempre che sia installato tutto correttamente eseguendo da SHELL il
+        comando :<br>
+        <h4>node-sass -v</h4><br>
+    </li>
+    <li>Per verificare il corretto funzionamento, creiamo un progetto di prova strutturato nel seguente modo (scrivete
+        anche il codice che vedete nell’immagine successiva nei file opportuni) :<br><br>
+        <img src="assets/sass-3.png" alt="sass-3" width="800" height="500">
+    </li>
+    <li>A questo punto andremo ad includere nel nostro file index.html il contenuto generato e convertito in css dei
+        file .sass e .scss, da SHELL eseguendo i comandi :
+    </li>
+    <li>script per convertire tutti i file dalla folder scss con estensioni .scss nella folder css :<br>
+        <h4>node-sass scss -o css</h4>
+    </li>
+    <li>script per convertire tutti i file dalla folder sass con estensioni .saas nella folder css : <br>
+        <h4>node-sass sass -o css</h4>
+    </li>
+    <li>
+        oppure creare un file batch salvandolo con estensione .sh inserendo il seguente script : <br>
+        <h4>
+            #!/bin/sh<br>
+            echo "Creazione script per convertire tutti i file dalla folder scss con estensioni .scss nella folder
+            css"<br>
+            node-sass scss -o css<br>
+            echo "Creazione script per convertire tutti i file dalla folder sass con estensioni .saas nella folder
+            css"<br>
+            node-sass sass -o css</h4>
+    </li>
+    <li>
+        – Se apriamo la nostra pagina web index.html il risultato sarà il seguente : <br><br>
+        <img src="assets/sass-3-2.png" alt="sass-3-2" width="800" height="500">
+    </li>
+    <li>se al posto degli scripts vogliamo utilizzare un software come Koala per la generazione dei file css a partire
+        da estensioni .sass e .scss , riprendere dal punto 4 e :
+    </li>
+    <li>Installare Koala, potete recarvi <a href="http://koala-app.com/" target="_blank">qui</a> e far partire il
+        download :
+    </li>
+    <li>Dopo averlo installato, apriamo Koala e carichiamo la cartella del progetto, possiamo notare come Koala trovi
+        tutti i file sass/scss da noi creati indicandoci il nome e il percorso dove Koala inserirà il file con il css
+        compilato :<br><br>
+        <img src="assets/sass-8.png" alt="sass-3" width="800" height="500"><br><br>
+        automaticamente Koala genererà i file css relativi ai .sass e .scss nella rispettiva folder css .
+    </li>
+</ol>
+</body>
+</html>
